@@ -18,20 +18,25 @@ def full_name(first_name, last_name, title)
   # instead, if only first name is given then name is reset to be first_name
   elsif first_name
     name = first_name
-  # otherwise, if anything else is given, then "Oh no, that doesn't look like a name" comes up as an "error"
+  # otherwise, if anything else is given, then "Oh no, that doesn't look like a name" comes up as an error
   else
     raise "Oh no, that doesn't look like a name"
   # end the if loop
   end
 
-  puts name # if placed here shows the result of the if loop
+  #puts name # if placed here shows the result of the if loop
   # return name variable
   return name
 # end the method
 end
 
-# test
+# tests
 puts full_name("Bob", "Jones", "Mr.")
+puts full_name(nil, "Jones", "Mr.")
+puts full_name("Bob", "Jones", nil)
+puts full_name("Bob", nil, nil)
+#puts full_name(nil, nil, "Mr.") # this test ends in an error
+
 
 
 # Coding:
